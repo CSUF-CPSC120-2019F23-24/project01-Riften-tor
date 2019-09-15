@@ -10,6 +10,7 @@ int main()
   int days; // Days the trip will take
   double hotel_expense;
   double meal_expense;
+  double total;
 
   std::cout << "Welcome to the Business Trip Tracker!" << std::endl;
 
@@ -27,6 +28,8 @@ int main()
   std::cout << "What is the total meal expense? ";
   std::cin >> meal_expense;
 
-  std::cout << "Location" << std::setw(10) << "Days" << std::setw(10) << "Hotel" << std::setw(10) << "Meals" << std::setw(10) << "Total" << std::setw(10) << std::endl;
-  std::cout << location << std::setw(6) << days << std::setw(6) << hotel_expense << std::setw(6) << meal_expense << std::setw(6) << std::endl;
+  total = hotel_expense + meal_expense;
+
+  std::cout << "Location\t" << "Days\t" << "Hotel\t" << "Meals\t" << "Total\t" << std::endl;
+  std::cout << location << "\t\t" << days << "\t" << hotel_expense << "\t" << meal_expense << "\t" << total << std::endl;
 }
